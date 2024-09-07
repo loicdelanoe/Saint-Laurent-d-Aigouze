@@ -31,7 +31,7 @@ class ContactForm
         if (count($_SESSION['errors']) > 0) {
             $_SESSION['old'] = $data;
         } else {
-            $_SESSION['feedback'] = pll__("Merci ! Votre message a bien été envoyé :)");
+            $_SESSION['feedback'] = __("Merci ! Votre message a bien été envoyé :)");
             self::sendMail($data);
         }
 
@@ -65,7 +65,7 @@ class ContactForm
     private static function required(string $key, array $data): bool
     {
         if (empty($data[$key])) {
-            $_SESSION['errors'][$key] = pll__("Ce champ est requis", 'dw');
+            $_SESSION['errors'][$key] = __("Ce champ est requis", 'dw');
             return false;
         }
 
@@ -75,7 +75,7 @@ class ContactForm
     private static function email(string $key, array $data): bool
     {
         if (!filter_var($data[$key], FILTER_VALIDATE_EMAIL)) {
-            $_SESSION['errors'][$key] = pll__("L'adresse mail n'est pas valide");
+            $_SESSION['errors'][$key] = __("L'adresse mail n'est pas valide");
             return false;
         }
         return true;
