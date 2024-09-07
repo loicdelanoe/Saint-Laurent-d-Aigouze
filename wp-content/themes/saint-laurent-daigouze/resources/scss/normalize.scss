@@ -1,0 +1,39 @@
+html, html * {
+  box-sizing: border-box;
+}
+
+body {
+}
+
+section, header, footer {
+  width: 100%;
+  padding: 0 24px;
+}
+
+a {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, textarea, select {
+  border-radius: 0;
+  font-family: inherit;
+}
+
+a.active {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  section, header, footer {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  section {
+    padding: 5em 24px;
+  }
+}

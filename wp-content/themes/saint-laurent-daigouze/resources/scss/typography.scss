@@ -1,0 +1,47 @@
+body {
+}
+
+h1, h2, h3, h4, dt, label {
+  font-weight: 600;
+}
+
+p, a, small, textarea,dd {
+  line-height: 1.3em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: inherit;
+}
+
+textarea, input {
+  font-size: inherit;
+}
+
+h1, h2, h3, h4, p, a, small, label, input, textarea, dt, dd {
+}
+
+strong {
+  font-weight: bold;
+}
+
+h2 {
+  &[data-variant="secondary"] {
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 4.5em;
+  }
+}
