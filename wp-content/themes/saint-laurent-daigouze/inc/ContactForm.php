@@ -10,8 +10,6 @@ class ContactForm
 {
     public function __construct($data)
     {
-        // Uncomment for polylang support
-        // switch_to_locale($data['lang']);
 
         $_SESSION['errors'] = [];
         $_SESSION['old'] = [];
