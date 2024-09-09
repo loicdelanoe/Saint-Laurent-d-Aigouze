@@ -155,6 +155,10 @@ a.active {
   font-weight: bold;
 }
 
+.panels, .history {
+  max-width: 842px;
+}
+
 @media screen and (min-width: 1024px) {
   section, header, footer {
     max-width: 1200px;
@@ -189,6 +193,17 @@ a.active {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 3.5rem;
+  }
+  .header__container {
+    padding-bottom: 3rem;
+  }
+  .header__title {
+    font-size: 1.2em;
+  }
+}
 .bg {
   background-image: url("../img/village.jpg");
   background-repeat: no-repeat;
@@ -214,6 +229,11 @@ a.active {
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    background-position: top -200px right -100px;
+  }
+}
 .hero {
   position: relative;
   z-index: 1;
@@ -246,6 +266,37 @@ a.active {
   height: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-top: 4.5rem;
+  }
+  .hero__title {
+    font-size: 3.5em;
+    margin-left: 20rem;
+    margin-top: 5rem;
+  }
+  .hero__logo {
+    right: initial;
+    left: 24px;
+    max-width: 283px;
+    min-width: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 4.5em;
+    margin-left: 23rem;
+    margin-top: 5rem;
+  }
+  .hero__logo {
+    right: initial;
+    left: 24px;
+    width: 100%;
+  }
+}
 .panels {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -263,6 +314,11 @@ a.active {
   width: 40px;
   background-color: #870727;
 }
+.panels__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .panels__list {
   display: flex;
   flex-direction: column;
@@ -275,6 +331,25 @@ a.active {
   height: 182px;
 }
 
+@media screen and (min-width: 768px) {
+  .panels {
+    padding-top: 12rem;
+  }
+  .panels__title {
+    font-size: 2.6em;
+    margin-bottom: 1em;
+  }
+  .panels__list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .panels__img {
+    height: 254px;
+  }
+  .panels__item:nth-child(even) > img {
+    height: 200px;
+  }
+}
 .history__title {
   display: flex;
   flex-direction: column;
@@ -300,6 +375,18 @@ a.active {
   padding-bottom: 7rem;
 }
 
+@media screen and (min-width: 768px) {
+  .history {
+    padding-top: 2rem;
+  }
+  .history__title {
+    font-size: 2.6em;
+    margin-bottom: 1em;
+  }
+  .history__container {
+    flex-direction: row;
+  }
+}
 .cta {
   display: flex;
   justify-content: center;
@@ -309,6 +396,11 @@ a.active {
   background-color: #870727;
   color: #FFFFFF;
   border: 1px solid #870727;
+  transition: 0.3s ease-out;
+}
+.cta:hover {
+  background-color: #FFFFFF;
+  color: #870727;
 }
 .cta:nth-child(even),
 .cta [data-variant=secondary] {
@@ -316,15 +408,20 @@ a.active {
   border: 1px solid #870727;
   background-color: transparent;
 }
+.cta:nth-child(even):hover,
+.cta [data-variant=secondary]:hover {
+  background-color: #870727;
+  color: #FFFFFF;
+}
 
 .footer {
-  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  border-top: 1px solid #870727;
   color: #870727;
   font-weight: 600;
 }
 .footer__container {
+  padding-top: 1.5rem;
+  border-top: 1px solid #870727;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -9,9 +9,12 @@
             <ul class="panels__list">
                 <?php foreach ($images as $image): ?>
                     <li class="panels__item">
-                        <?= wp_get_attachment_image($image, 'medium', false, [
-                            'class' => 'panels__img'
-                        ]) ?>
+                        <a href="<?= wp_get_attachment_url($image) ?>">
+                            <span class="sro">Voir le panneau</span>
+                            <?= wp_get_attachment_image($image, 'medium', false, [
+                                'class' => 'panels__img'
+                            ]) ?>
+                        </a>
                     </li>
                 <?php endforeach; ?>
             </ul>

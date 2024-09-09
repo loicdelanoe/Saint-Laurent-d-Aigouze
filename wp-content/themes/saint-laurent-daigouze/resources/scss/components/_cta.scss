@@ -7,11 +7,22 @@
   background-color: $primary-color;
   color: $alt-text-color;
   border: 1px solid $primary-color;
+  transition: .3s ease-out;
+
+  &:hover {
+    background-color: $background-color;
+    color: $primary-color;
+  }
 
   &:nth-child(even),
   [data-variant="secondary"]{
     color: $primary-color;
     border: 1px solid $primary-color;
     background-color: transparent;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $alt-text-color;
+    }
   }
 }

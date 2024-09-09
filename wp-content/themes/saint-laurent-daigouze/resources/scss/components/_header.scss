@@ -17,12 +17,27 @@
 
     &--ananda {
       font-size: 1.6em;
-      font-family: "Ananda";
+      font-family: "Ananda", "Brush Script MT", cursive;
     }
 
     &--bold {
       font-size: 1.1em;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet){
+  .header {
+    padding-top: 3.5rem;
+
+    &__container {
+    padding-bottom: 3rem;
+
+    }
+
+    &__title {
+      font-size: 1.2em;
     }
   }
 }

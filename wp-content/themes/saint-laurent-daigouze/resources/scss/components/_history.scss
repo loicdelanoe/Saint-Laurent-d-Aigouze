@@ -27,3 +27,18 @@
     padding-bottom: 7rem;
   }
 }
+
+@media screen and (min-width: $tablet){
+  .history {
+    padding-top: 2rem;
+
+    &__title {
+      font-size: 2.6em;
+      margin-bottom: 1em;
+    }
+
+    &__container {
+      flex-direction: row;
+    }
+  }
+}
