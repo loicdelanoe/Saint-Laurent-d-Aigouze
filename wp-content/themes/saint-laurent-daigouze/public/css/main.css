@@ -65,6 +65,27 @@ table {
   border: 0;
 }
 
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Ananda";
+  src: url("../fonts/Ananda-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 h1, h2, h3, h4, dt, label {
   font-weight: 600;
 }
@@ -104,6 +125,10 @@ html, html * {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
 section, header, footer {
   width: 100%;
   padding: 0 24px;
@@ -111,6 +136,10 @@ section, header, footer {
 
 a {
   display: inline-block;
+}
+
+strong {
+  font-weight: bold;
 }
 
 button {
@@ -134,4 +163,179 @@ a.active {
   section {
     padding: 5em 24px;
   }
+}
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+  color: #FFFFFF;
+}
+.header__container {
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 2rem;
+}
+.header__title {
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.header__title--ananda {
+  font-size: 1.6em;
+  font-family: "Ananda";
+}
+.header__title--bold {
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.bg {
+  background-image: url("../img/village.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.bg > * {
+  color: #FFFFFF;
+}
+.bg:before {
+  z-index: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
+}
+
+.main {
+  background-image: url(../img/logo-background.svg);
+  background-position: -20px -50px;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  gap: 0.3rem;
+}
+.hero__title:after {
+  content: "";
+  height: 3px;
+  width: 60px;
+  background-color: #FFFFFF;
+}
+.hero__provencal {
+  font-family: "Ananda";
+  font-size: 0.7em;
+  text-transform: initial;
+}
+.hero__logo {
+  position: absolute;
+  margin-top: 0.5rem;
+  right: 24px;
+  width: 120px;
+  height: auto;
+}
+
+.panels {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.panels__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+.panels__title:after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background-color: #870727;
+}
+.panels__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.panels__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 182px;
+}
+
+.history__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+.history__title:after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background-color: #870727;
+}
+.history__text {
+  text-wrap: pretty;
+  margin-bottom: 2.5rem;
+}
+.history__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding-bottom: 7rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 1.4rem 1.5rem;
+  background-color: #870727;
+  color: #FFFFFF;
+  border: 1px solid #870727;
+}
+.cta:nth-child(even),
+.cta [data-variant=secondary] {
+  color: #870727;
+  border: 1px solid #870727;
+  background-color: transparent;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid #870727;
+  color: #870727;
+  font-weight: 600;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__link--ld {
+  display: flex;
+  align-items: center;
+}
+.footer__link--ld:after {
+  content: url("../img/ld.svg");
+  display: block;
+  width: 20px;
+  height: 20px;
 }

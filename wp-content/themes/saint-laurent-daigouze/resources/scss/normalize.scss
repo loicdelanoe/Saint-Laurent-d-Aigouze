@@ -3,6 +3,7 @@ html, html * {
 }
 
 body {
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 section, header, footer {
@@ -12,6 +13,10 @@ section, header, footer {
 
 a {
   display: inline-block;
+}
+
+strong {
+  font-weight: bold;
 }
 
 button {

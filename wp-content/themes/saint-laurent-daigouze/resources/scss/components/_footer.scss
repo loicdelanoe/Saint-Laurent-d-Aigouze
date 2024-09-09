@@ -1,0 +1,27 @@
+.footer {
+  //background-color: green;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid $primary-color;
+  color: $primary-color;
+  font-weight: 600;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    &--ld {
+      display: flex;
+      align-items: center;
+      &:after {
+        content: url("../img/ld.svg");
+        display: block;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

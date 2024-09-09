@@ -1,12 +1,6 @@
 <?php get_template_part('parts/header', 'header') ?>
 
-<main id="main">
-    <section class="hero">
-        <h2 class="hero__title">
-            <?= get_the_title() ?>
-            <span class="hero__provencal"><?= get_field('provencal_name') ?></span>
-        </h2>
-    </section>
+<main class="main" id="main">
     <section class="panels">
         <h2 class="panels__title">Panneaux</h2>
         <?php
@@ -31,7 +25,7 @@
         <?php if (have_rows('links')) : ?>
             <div class="history__container">
                 <?php while (have_rows('links')) : the_row(); ?>
-                    <a href="<?= get_sub_field('url') ?>" target="_blank"><?= get_sub_field('label') ?></a>
+                    <a class="cta" href="<?= get_sub_field('url') ?>" target="_blank"><?= get_sub_field('label') ?></a>
                 <?php endwhile; ?>
             </div>
         <?php endif; ?>

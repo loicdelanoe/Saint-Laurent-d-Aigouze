@@ -1,0 +1,28 @@
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+  color: $alt-text-color;
+
+  &__container {
+    border-bottom: 1px solid $alt-text-color;
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    &--ananda {
+      font-size: 1.6em;
+      font-family: "Ananda";
+    }
+
+    &--bold {
+      font-size: 1.1em;
+      text-transform: uppercase;
+    }
+  }
+}

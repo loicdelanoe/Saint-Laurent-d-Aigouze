@@ -1,4 +1,9 @@
 {
     "/js/main.js": "/js/main.js",
-    "/css/main.css": "/css/main.css"
+    "/css/main.css": "/css/main.css",
+    "/img/ld.svg": "/img/ld.svg",
+    "/img/logo-background.svg": "/img/logo-background.svg",
+    "/img/logo.jpg": "/img/logo.jpg",
+    "/img/village.jpg": "/img/village.jpg",
+    "/fonts/Ananda-Black.ttf": "/fonts/Ananda-Black.ttf"
 }

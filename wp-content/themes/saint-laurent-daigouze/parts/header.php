@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<?= get_language_attributes() ?>">
+<html <?= get_language_attributes() ?>>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -23,6 +23,23 @@
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 <a href="#main" class="skip-link">Aller au contenu</a>
-<header class="header" id="header" role="banner">
-    <h1 class="header__title"><?= get_bloginfo('name') ?></h1>
-</header>
+<div class="bg">
+    <header class="header" id="header" role="banner">
+        <div class="header__container">
+            <h1 class="header__title">
+                (En)quête de PATRIMOINE :
+                <strong class="header__title--bold">déambulations dans les rues de</strong>
+                <span class="header__title--ananda">Saint-Laurent-d'Aigouze</span>
+            </h1>
+        </div>
+    </header>
+    <section class="hero">
+        <h2 class="hero__title">
+            <?= get_the_title() ?>
+            <span class="hero__provencal"><?= get_field('provencal_name') ?></span>
+        </h2>
+        <?= wp_get_attachment_image(get_field('logo', 'option'), 'medium', false, [
+            'class' => 'hero__logo',
+        ]) ?>
+    </section>
+</div>

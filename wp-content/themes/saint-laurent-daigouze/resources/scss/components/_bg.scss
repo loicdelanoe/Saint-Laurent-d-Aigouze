@@ -1,0 +1,26 @@
+.bg {
+  background-image: url('../img/village.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+  & > * {
+    color: $alt-text-color;
+  }
+
+  &:before {
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.8;
+  }
+}
+
+.main {
+  background-image: url(../img/logo-background.svg);
+  background-position: -20px -50px;
+  background-repeat: no-repeat;
+} 
